@@ -15,6 +15,8 @@
 		A79CF8541F171283007D2530 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A79CF8531F171283007D2530 /* main.m */; };
 		A79CF85E1F171284007D2530 /* AudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79CF85D1F171284007D2530 /* AudioPlayerTests.m */; };
 		A79CF8691F171284007D2530 /* AudioPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A79CF8681F171284007D2530 /* AudioPlayerUITests.m */; };
+		A79CF8801F1712E3007D2530 /* PlayAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = A79CF87F1F1712E3007D2530 /* PlayAudio.m */; };
+		A79CF8821F1713C6007D2530 /* testfile.aac in Resources */ = {isa = PBXBuildFile; fileRef = A79CF8811F1713C6007D2530 /* testfile.aac */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,16 @@
 		A79CF8641F171284007D2530 /* AudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79CF8681F171284007D2530 /* AudioPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerUITests.m; sourceTree = "<group>"; };
 		A79CF86A1F171284007D2530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79CF8771F171299007D2530 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A79CF8781F1712A6007D2530 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A79CF8791F1712B1007D2530 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		A79CF87A1F1712BA007D2530 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		A79CF87B1F1712C1007D2530 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A79CF87C1F1712CA007D2530 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A79CF87D1F1712D4007D2530 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A79CF87E1F1712E3007D2530 /* PlayAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayAudio.h; sourceTree = "<group>"; };
+		A79CF87F1F1712E3007D2530 /* PlayAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayAudio.m; sourceTree = "<group>"; };
+		A79CF8811F1713C6007D2530 /* testfile.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = testfile.aac; path = ../../testfile.aac; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,7 @@
 				A79CF85C1F171284007D2530 /* AudioPlayerTests */,
 				A79CF8671F171284007D2530 /* AudioPlayerUITests */,
 				A79CF8421F171282007D2530 /* Products */,
+				A79CF8761F171299007D2530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +114,13 @@
 		A79CF8431F171282007D2530 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				A79CF8811F1713C6007D2530 /* testfile.aac */,
 				A79CF8441F171282007D2530 /* AppDelegate.h */,
 				A79CF8451F171282007D2530 /* AppDelegate.m */,
 				A79CF8471F171282007D2530 /* ViewController.h */,
 				A79CF8481F171283007D2530 /* ViewController.m */,
+				A79CF87E1F1712E3007D2530 /* PlayAudio.h */,
+				A79CF87F1F1712E3007D2530 /* PlayAudio.m */,
 				A79CF84A1F171283007D2530 /* Main.storyboard */,
 				A79CF84D1F171283007D2530 /* Assets.xcassets */,
 				A79CF84F1F171283007D2530 /* LaunchScreen.storyboard */,
@@ -130,6 +146,20 @@
 				A79CF86A1F171284007D2530 /* Info.plist */,
 			);
 			path = AudioPlayerUITests;
+			sourceTree = "<group>";
+		};
+		A79CF8761F171299007D2530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A79CF87D1F1712D4007D2530 /* Foundation.framework */,
+				A79CF87C1F1712CA007D2530 /* CoreFoundation.framework */,
+				A79CF87B1F1712C1007D2530 /* AVFoundation.framework */,
+				A79CF87A1F1712BA007D2530 /* CoreAudioKit.framework */,
+				A79CF8791F1712B1007D2530 /* AudioUnit.framework */,
+				A79CF8781F1712A6007D2530 /* CoreAudio.framework */,
+				A79CF8771F171299007D2530 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +268,7 @@
 				A79CF8511F171283007D2530 /* LaunchScreen.storyboard in Resources */,
 				A79CF84E1F171283007D2530 /* Assets.xcassets in Resources */,
 				A79CF84C1F171283007D2530 /* Main.storyboard in Resources */,
+				A79CF8821F1713C6007D2530 /* testfile.aac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +295,7 @@
 			files = (
 				A79CF8491F171283007D2530 /* ViewController.m in Sources */,
 				A79CF8541F171283007D2530 /* main.m in Sources */,
+				A79CF8801F1712E3007D2530 /* PlayAudio.m in Sources */,
 				A79CF8461F171282007D2530 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
